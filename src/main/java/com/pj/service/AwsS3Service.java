@@ -14,12 +14,10 @@ public interface AwsS3Service {
     /**
      * Download the file from S3
      *
-     * @param fileName S3 Location of the file
-     *
      * @return Resource Object of the file
      *
      * @author Pavan Kumar Jadda
      * @since 2.3.7
      */
-    FileSystemResource downloadDocument(String fileName) throws InterruptedException, IOException;
+    FileSystemResource downloadDocument() throws InterruptedException, IOException;
 }

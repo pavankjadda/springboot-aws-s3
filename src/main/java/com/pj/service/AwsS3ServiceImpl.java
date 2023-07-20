@@ -39,9 +39,9 @@ public class AwsS3ServiceImpl implements AwsS3Service {
      * @since 2.3.7
      */
     @Override
-    public FileSystemResource downloadDocument(String fileName) {
+    public FileSystemResource downloadDocument() {
         try {
-            var tempFile = File.createTempFile("download-", "-" + fileName);
+            var tempFile = File.createTempFile("download-", "-test.pdf");
             var downloadFileRequest =
                     DownloadFileRequest.builder().getObjectRequest(req -> req.bucket(s3Properties.getBucket()).key(s3Properties.getKey())).destination(tempFile)
                             .addTransferListener(LoggingTransferListener.create()).build();
