@@ -1,5 +1,6 @@
 package com.pj.properties;
 
+import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
@@ -11,31 +12,8 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 @ConfigurationProperties(prefix = "aws.s3")
+@Data
 public class AwsS3Properties {
     private String bucket;
     private String key;
-
-    public AwsS3Properties() {
-    }
-
-    public AwsS3Properties(String bucket, String key) {
-        this.bucket = bucket;
-        this.key = key;
-    }
-
-    public String getBucket() {
-        return bucket;
-    }
-
-    public void setBucket(String bucket) {
-        this.bucket = bucket;
-    }
-
-    public String getKey() {
-        return key;
-    }
-
-    public void setKey(String key) {
-        this.key = key;
-    }
 }

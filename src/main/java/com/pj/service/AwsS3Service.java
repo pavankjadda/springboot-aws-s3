@@ -20,4 +20,6 @@ public interface AwsS3Service {
      * @since 2.3.7
      */
     FileSystemResource downloadDocument() throws InterruptedException, IOException;
+
+    FileSystemResource downloadDocument2();
 }
