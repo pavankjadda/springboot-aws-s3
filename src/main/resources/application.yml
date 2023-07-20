@@ -1,0 +1,17 @@
+server:
+  port: 8081
+
+  ## Spring Cloud AWS Config
+spring:
+  cloud:
+    aws:
+      credentials:
+        access-key: ${pres.aws.s3.access_key}
+        secret-key: ${pres.aws.s3.access_secret_key}
+        instance-profile: true
+    region:
+      static: "us-east-1"
+aws:
+  s3:
+    bucket: ${pres.aws.s3.bucket}
+    key: ${pres.aws.s3.key}
