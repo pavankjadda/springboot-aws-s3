@@ -8,9 +8,9 @@
         <version>3.0.5</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.pj</groupId>
+    <groupId>dev.pj</groupId>
     <artifactId>springboot-aws-s3-bug</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>springboot-aws-s3-bug</name>
     <description>springboot-aws-s3-bug</description>
     <properties>
