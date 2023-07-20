@@ -9,3 +9,9 @@ the application.yml file.
 2. Run the `SpringBootAwsS3BugApplication` class
 3. Make sure to replace the `accessKey` and `secretKey` in the `application.yml` file with your own credentials
    4Open your browser and go to GET http://localhost:8081/api/v1/document/download
+
+## Solution
+
+1. Define `CustomAWSCredentialsProvider` class and implement `AWSCredentialsProvider` interface
+2. Or define it inline in [AwsConfig](com/pj/config/AwsConfig.java) class and use `BasicAWSCredentials` class and
+   pass `accessKey` and `secretKey` to it
