@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.0.5</version>
+        <version>3.3.3</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>dev.pj</groupId>
@@ -14,9 +14,9 @@
     <name>springboot-aws-s3-bug</name>
     <description>springboot-aws-s3-bug</description>
     <properties>
-        <java.version>17</java.version>
+        <java.version>21</java.version>
         <spring-cloud.version>2022.0.3</spring-cloud.version>
-        <spring-cloud-aws.version>3.0.1</spring-cloud-aws.version>
+        <spring-cloud-aws.version>3.1.1</spring-cloud-aws.version>
     </properties>
 
     <dependencies>
