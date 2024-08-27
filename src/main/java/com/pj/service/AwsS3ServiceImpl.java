@@ -85,12 +85,12 @@ public class AwsS3ServiceImpl implements AwsS3Service {
     public void createAndUploadFile() {
         var tempFile = getJsonFile();
         try {
-            // Create a directory in the bucket if it does not exist
-            var putOb = PutObjectRequest.builder()
-                    .bucket(s3Properties.getBucket())
-                    .key("protect")
-                    .build();
             if (tempFile != null) {
+                // Creates a directory in the bucket if it does not exist
+                var putOb = PutObjectRequest.builder()
+                        .bucket(s3Properties.getBucket())
+                        .key("protect/" + tempFile.getName())
+                        .build();
                 var response = s3Client.putObject(putOb, RequestBody.fromFile(tempFile));
                 logger.info("File:{} uploaded successfully. ETag:{}", tempFile.getName(), response.eTag());
             }
@@ -110,7 +110,7 @@ public class AwsS3ServiceImpl implements AwsS3Service {
         var employees = employeeService.getEmployees();
 
         try {
-            jsonFile = File.createTempFile("employees-", ".json");
+            jsonFile = new File("employees.json");
             new ObjectMapper().writeValue(new File("employees.json"), employees);
         } catch (Exception e) {
             System.err.println("Error writing JSON: " + e.getMessage());
