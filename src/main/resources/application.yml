@@ -3,14 +3,15 @@ server:
 
   ## Spring Cloud AWS Config
 spring:
+  ## Spring Cloud AWS Config
   cloud:
     aws:
       credentials:
         access-key: ${pres.aws.s3.access_key}
         secret-key: ${pres.aws.s3.access_secret_key}
         instance-profile: true
-    region:
-      static: "us-east-1"
+      region:
+        static: "us-east-1"
 aws:
   s3:
     bucket: ${pres.aws.s3.bucket}

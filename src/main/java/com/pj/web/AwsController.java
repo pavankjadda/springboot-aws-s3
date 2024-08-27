@@ -27,6 +27,11 @@ public class AwsController {
      */
     @GetMapping("/download")
     public FileSystemResource downloadDocument() throws IOException, InterruptedException {
-        return awsS3Service.downloadDocument();
+        return awsS3Service.downloadDocumentUsingTransferManager();
+    }
+
+    @GetMapping("/test")
+    public void createAndUploadFile() {
+        awsS3Service.createAndUploadFile();
     }
 }

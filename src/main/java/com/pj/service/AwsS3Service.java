@@ -19,7 +19,11 @@ public interface AwsS3Service {
      * @author Pavan Kumar Jadda
      * @since 2.3.7
      */
-    FileSystemResource downloadDocument() throws InterruptedException, IOException;
+    FileSystemResource downloadDocumentUsingTransferManager() throws InterruptedException, IOException;
 
-    FileSystemResource downloadDocument2();
+    FileSystemResource downloadDocumentUsingS3Client();
+
+    void listObjects();
+
+    void createAndUploadFile();
 }

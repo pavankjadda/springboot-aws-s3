@@ -6,13 +6,13 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>3.3.3</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath/>
     </parent>
     <groupId>dev.pj</groupId>
-    <artifactId>springboot-aws-s3-bug</artifactId>
+    <artifactId>springboot-aws-s3</artifactId>
     <version>1.0.0</version>
-    <name>springboot-aws-s3-bug</name>
-    <description>springboot-aws-s3-bug</description>
+    <name>springboot-aws-s3</name>
+    <description>springboot-aws-s3</description>
     <properties>
         <java.version>21</java.version>
         <spring-cloud.version>2022.0.3</spring-cloud.version>
